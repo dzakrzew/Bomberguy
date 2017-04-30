@@ -1,7 +1,10 @@
 ﻿using System;
+<<<<<<< HEAD
+=======
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+>>>>>>> 5638874d5cc06e6e063c867ecf9ec6a6f032e51c
 using Bomberguy.Controller;
 using SFML.Graphics;
 using SFML.Window;

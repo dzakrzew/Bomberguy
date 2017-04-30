@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3F2C9468-EE49-4C28-B66B-251A9E6BD24E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bomberguy</RootNamespace>
+    <AssemblyName>Bomberguy</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\AnyCPU\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\AnyCPU\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="sfmlnet-audio-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\AppData\Local\Temporary Projects\Utopia\Libraries\sfmlnet-audio-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-graphics-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\AppData\Local\Temporary Projects\Utopia\Libraries\sfmlnet-graphics-2.dll</HintPath>
+    </Reference>
+    <Reference Include="sfmlnet-window-2, Version=0.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\AppData\Local\Temporary Projects\Utopia\Libraries\sfmlnet-window-2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ControllerManager.cs" />
+    <Compile Include="Controller\AboutController.cs" />
+    <Compile Include="Controller\GameController.cs" />
+    <Compile Include="Controller\HelpController.cs" />
+    <Compile Include="Controller\IController.cs" />
+    <Compile Include="Controller\MainController.cs" />
+    <Compile Include="Assets.cs" />
+    <Compile Include="Model\Board.cs" />
+    <Compile Include="Model\Button.cs" />
+    <Compile Include="Model\Cell.cs" />
+    <Compile Include="Model\IModel.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="View\AboutView.cs" />
+    <Compile Include="View\GameView.cs" />
+    <Compile Include="View\HelpView.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\MainView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\sounds\beep.wav" />
+    <Content Include="Assets\sounds\explosion.wav" />
+    <Content Include="Assets\sounds\fuse.wav" />
+    <Content Include="Assets\sounds\scream.wav" />
+    <Content Include="Assets\sounds\soundtrack.wav" />
+    <Content Include="Assets\sounds\throw.wav" />
+    <Content Include="Assets\sounds\win.wav" />
+    <Content Include="Assets\textures\about.png" />
+    <Content Include="Assets\textures\boxes.png" />
+    <Content Include="Assets\textures\buttons.png" />
+    <Content Include="Assets\textures\game.png" />
+    <Content Include="Assets\textures\help.png" />
+    <Content Include="Assets\textures\menu.png" />
+    <Content Include="Assets\textures\player.png" />
+    <Content Include="Assets\textures\win-black.png" />
+    <Content Include="Assets\textures\win-draw.png" />
+    <Content Include="Assets\textures\win-white.png" />
+    <Content Include="Libraries\x86\csfml-audio-2.dll" />
+    <Content Include="Libraries\x86\csfml-graphics-2.dll" />
+    <Content Include="Libraries\x86\csfml-window-2.dll" />
+    <Content Include="Libraries\x86\libsndfile-1.dll" />
+    <Content Include="Libraries\x86\openal32.dll" />
+    <Content Include="Libraries\x64\csfml-audio-2.dll" />
+    <Content Include="Libraries\x64\csfml-graphics-2.dll" />
+    <Content Include="Libraries\x64\csfml-window-2.dll" />
+    <Content Include="Libraries\x64\libsndfile-1.dll" />
+    <Content Include="Libraries\x64\openal32.dll" />
+    <Content Include="Libraries\sfmlnet-audio-2.dll" />
+    <Content Include="Libraries\sfmlnet-graphics-2.dll" />
+    <Content Include="Libraries\sfmlnet-window-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\fonts\default.ttf" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild" Condition="'$(Platform)' == 'x86'">
+    <Copy SourceFiles="Libraries\x86\csfml-audio-2.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x86\csfml-graphics-2.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x86\csfml-window-2.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x86\libsndfile-1.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x86\openal32.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+  </Target>
+  <Target Name="BeforeBuild" Condition="'$(Platform)' != 'x86'">
+    <Copy SourceFiles="Libraries\x64\csfml-audio-2.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x64\csfml-graphics-2.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x64\csfml-window-2.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x64\libsndfile-1.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="Libraries\x64\openal32.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)\Assets" "$(TargetDir)\Assets" /e /y /i /r</PostBuildEvent>
+  </PropertyGroup>
+</Project>
