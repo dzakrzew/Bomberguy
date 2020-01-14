@@ -12,7 +12,7 @@ namespace Bomberguy.Model
         public int BombPower = 1;       // sila razenia bomby
         public Sprite sprite;           // sprite gracza
         public bool IsAlive = true;     // czy gracz zyje?
-        public float Speed = 1.5f;      // szybkosc poruszania sie
+        public float Speed = 2.5f;      // szybkosc poruszania sie
 
         private GameController controller;      // aktualny kontroler ktoremu podlega gracz
         private bool isMoving = false;          // czy gracz jest w ruchu?

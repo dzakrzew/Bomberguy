@@ -16,7 +16,7 @@ namespace Bomberguy.Model
         private Board board;                // plansza na ktorej znajduje sie komorka
         private int giftsProbability = 30;  // prawdopodobienstwo wylosowania paczki
         private Player bombOwner;           // gracz ktory podlozyl bombe
-        private long bombTimestamp;         // sygnatura czasowa podlozenia bomby
+        public long bombTimestamp;         // sygnatura czasowa podlozenia bomby
         private long fireTimestamp;         // syg. czasowa palenia sie ognia
         private CellState __state;          // status komorki
 
@@ -77,6 +77,12 @@ namespace Bomberguy.Model
 
             for (int i = 0; i < 4; i++)
             {
+                if (Neighboors[i] != null && Neighboors[i].State == CellState.BOMB)
+                {
+                    // eksplozja sasiedniej bomby
+                    Neighboors[i].bombTimestamp = Utils.GetMsTimestamp() - 3000;
+                }
+
                 if (Neighboors[i] != null && Neighboors[i].State != CellState.WALL && Neighboors[i].State != CellState.BOMB)
                 {
                     if (Neighboors[i].State == CellState.BOX)
@@ -125,6 +131,11 @@ namespace Bomberguy.Model
                         {
                             Neighboors[(int)_dir].SetFire(_dir, n - 1);
                         }
+                    }
+                    else
+                    {
+                        // eksplozja bomby przed czasem przez podpalenie
+                        Neighboors[(int)_dir].bombTimestamp = Utils.GetMsTimestamp() - 3000;
                     }
                 }
             }
